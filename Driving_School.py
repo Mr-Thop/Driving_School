@@ -4,41 +4,27 @@ from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseUpload
 import io
-import os
-from dotenv import load_dotenv
-from google.oauth2.service_account import Credentials
 
 st.set_page_config(page_title="Maharashtra Motor Driving School", layout="wide")
 
 # Google Drive and Google Sheets API setup
-private_key = os.getenv('PRIVATE_KEY').replace('\\n', '\n')  # Multiline key needs this
-credentials = Credentials.from_service_account_info({
-    "type": "service_account",
-    "project_id": "your-project-id",
-    "private_key_id": "your-private-key-id",
-    "private_key": private_key,
-    "client_email": "your-service-account-email",
-    "client_id": "your-client-id",
-    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-    "token_uri": "https://oauth2.googleapis.com/token",
-    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/your-service-account-email"
-})
+SERVICE_ACCOUNT_FILE_S = './sheets-451316-b010093f1406.json'
+SERVICE_ACCOUNT_FILE_D = './sheets-451316-9e3f673ccd13.json'
 SCOPES_D = ['https://www.googleapis.com/auth/drive']
 SCOPES_S = ['https://www.googleapis.com/auth/spreadsheets']
 
-# credentials_d = service_account.Credentials.from_service_account_file(
-#     SERVICE_ACCOUNT_FILE_D, scopes=SCOPES_D
-# )
-# credentials_s = service_account.Credentials.from_service_account_file(
-#     SERVICE_ACCOUNT_FILE_S, scopes=SCOPES_S
-# )
-drive_service = build('drive', 'v3', credentials=credentials)
-sheets_service = build('sheets', 'v4', credentials=credentials)
+credentials_d = service_account.Credentials.from_service_account_file(
+    SERVICE_ACCOUNT_FILE_D, scopes=SCOPES_D
+)
+credentials_s = service_account.Credentials.from_service_account_file(
+    SERVICE_ACCOUNT_FILE_S, scopes=SCOPES_S
+)
+drive_service = build('drive', 'v3', credentials=credentials_d)
+sheets_service = build('sheets', 'v4', credentials=credentials_s)
 
-LICENSE_SHEET_ID = os.getenv('LICENSE_SHEET_ID')
-COURSE_SHEET_ID =  os.getenv('COURSE_SHEET_ID')
-DRIVE_FOLDER_ID =  os.getenv('DRIVE_FOLDER_ID')
+LICENSE_SHEET_ID = '1mWtRKCtyYEm798qGMRrcF92T8x3-LatBjPEVxSfPjMA'
+COURSE_SHEET_ID = '1BG69xjMP91Df6e1SG5aLpbUpXvqfsQmM_P-BUrQpfYE'
+DRIVE_FOLDER_ID = "10OX2etiQavtpYU32ReN_rCaeTsZXFOa7"
 
 # Upload file to Google Drive
 def upload_to_drive(file, filename):
