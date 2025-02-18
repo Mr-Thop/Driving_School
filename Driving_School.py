@@ -14,7 +14,7 @@ private_key_drive = os.getenv('PRIVATE_KEY_DRIVE')
 st.set_page_config(page_title="Maharashtra Motor Driving School", layout="wide")
 
 # Google Drive and Google Sheets API setup
-SERVICE_ACCOUNT_FILE_S = {
+SERVICE_ACCOUNT_FILE_D = {
     "type": "service_account",
     "project_id": "driving-school-451318",
     "private_key_id": "0162ff551fbe9981d838f34aed1683da978da24a",
@@ -28,10 +28,7 @@ SERVICE_ACCOUNT_FILE_S = {
     "universe_domain": "googleapis.com"
 }
 
-# Create credentials object
-credentials_S = Credentials.from_service_account_info(SERVICE_ACCOUNT_FILE_S)
-
-SERVICE_ACCOUNT_FILE_D = {
+SERVICE_ACCOUNT_FILE_S = {
     "type": "service_account",
     "project_id": "driving-school-451318",
     "private_key_id": "2420c9bc8bbe005528f269ccd4c306102fed04be",
@@ -46,6 +43,7 @@ SERVICE_ACCOUNT_FILE_D = {
 }
 
 # Create credentials object
+credentials_S = Credentials.from_service_account_info(SERVICE_ACCOUNT_FILE_S)
 credentials_D = Credentials.from_service_account_info(SERVICE_ACCOUNT_FILE_D)
 
 SCOPES_D = ['https://www.googleapis.com/auth/drive']
