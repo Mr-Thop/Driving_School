@@ -57,8 +57,8 @@ SCOPES_S = ['https://www.googleapis.com/auth/spreadsheets']
 # credentials_s = service_account.Credentials.from_service_account_file(
 #     SERVICE_ACCOUNT_FILE_S, scopes=SCOPES_S
 # )
-drive_service = build('drive', 'v3', credentials=credentials_d)
-sheets_service = build('sheets', 'v4', credentials=credentials_s)
+drive_service = build('drive', 'v3', credentials=credentials_D)
+sheets_service = build('sheets', 'v4', credentials=credentials_S)
 
 LICENSE_SHEET_ID = '1mWtRKCtyYEm798qGMRrcF92T8x3-LatBjPEVxSfPjMA'
 COURSE_SHEET_ID = '1BG69xjMP91Df6e1SG5aLpbUpXvqfsQmM_P-BUrQpfYE'
