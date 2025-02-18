@@ -27,12 +27,12 @@ credentials = Credentials.from_service_account_info({
 SCOPES_D = ['https://www.googleapis.com/auth/drive']
 SCOPES_S = ['https://www.googleapis.com/auth/spreadsheets']
 
-credentials_d = service_account.Credentials.from_service_account_file(
-    SERVICE_ACCOUNT_FILE_D, scopes=SCOPES_D
-)
-credentials_s = service_account.Credentials.from_service_account_file(
-    SERVICE_ACCOUNT_FILE_S, scopes=SCOPES_S
-)
+# credentials_d = service_account.Credentials.from_service_account_file(
+#     SERVICE_ACCOUNT_FILE_D, scopes=SCOPES_D
+# )
+# credentials_s = service_account.Credentials.from_service_account_file(
+#     SERVICE_ACCOUNT_FILE_S, scopes=SCOPES_S
+# )
 drive_service = build('drive', 'v3', credentials=credentials)
 sheets_service = build('sheets', 'v4', credentials=credentials)
 
