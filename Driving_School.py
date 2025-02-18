@@ -4,12 +4,42 @@ from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseUpload
 import io
+from google.oauth2.service_account import Credentials
+import os
+
+private_key_sheets = os.getenv('PRIVATE_KEY_SHEETS').replace('\\n', '\n')  # Multiline key needs this
+private_key_drive = os.getenv('PRIVATE_KEY_DRIVE').replace('\\n', '\n')  # Multiline key needs this
+
 
 st.set_page_config(page_title="Maharashtra Motor Driving School", layout="wide")
 
 # Google Drive and Google Sheets API setup
-SERVICE_ACCOUNT_FILE_S = './sheets-451316-b010093f1406.json'
-SERVICE_ACCOUNT_FILE_D = './sheets-451316-9e3f673ccd13.json'
+SERVICE_ACCOUNT_FILE_S = Credentials.from_service_account_info({
+    "type": "service_account",
+    "project_id": "driving-school-451318",
+    "private_key_id": "0162ff551fbe9981d838f34aed1683da978da24a",
+    "private_key": private_key_sheets,
+    "client_email": "drive-school@driving-school-451318.iam.gserviceaccount.com",
+    "client_id": "106944027333027449191",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/drive-school%40driving-school-451318.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+})
+SERVICE_ACCOUNT_FILE_D = Credentials.from_service_account_info({
+    "type": "service_account",
+    "project_id": "driving-school-451318",
+    "private_key_id": "2420c9bc8bbe005528f269ccd4c306102fed04be",
+    "private_key": private_key_sheets,
+    "client_email": "driving-sheets@driving-school-451318.iam.gserviceaccount.com",
+    "client_id": "110903778401150039669",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/driving-sheets%40driving-school-451318.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+})
 SCOPES_D = ['https://www.googleapis.com/auth/drive']
 SCOPES_S = ['https://www.googleapis.com/auth/spreadsheets']
 
