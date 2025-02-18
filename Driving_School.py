@@ -18,7 +18,7 @@ SERVICE_ACCOUNT_FILE_D = {
     "type": "service_account",
     "project_id": "driving-school-451318",
     "private_key_id": "0162ff551fbe9981d838f34aed1683da978da24a",
-    "private_key": private_key_sheets,
+    "private_key": private_key_drive,
     "client_email": "drive-school@driving-school-451318.iam.gserviceaccount.com",
     "client_id": "106944027333027449191",
     "auth_uri": "https://accounts.google.com/o/oauth2/auth",
@@ -58,9 +58,9 @@ SCOPES_S = ['https://www.googleapis.com/auth/spreadsheets']
 drive_service = build('drive', 'v3', credentials=credentials_D)
 sheets_service = build('sheets', 'v4', credentials=credentials_S)
 
-LICENSE_SHEET_ID = '1mWtRKCtyYEm798qGMRrcF92T8x3-LatBjPEVxSfPjMA'
-COURSE_SHEET_ID = '1BG69xjMP91Df6e1SG5aLpbUpXvqfsQmM_P-BUrQpfYE'
-DRIVE_FOLDER_ID = "10OX2etiQavtpYU32ReN_rCaeTsZXFOa7"
+LICENSE_SHEET_ID = os.getenv(LICENSE_SHEET_ID)
+COURSE_SHEET_ID = os.getenv(COURSE_SHEET_ID)
+DRIVE_FOLDER_ID = os.getenv(DRIVE_FOLDER_ID)
 
 # Upload file to Google Drive
 def upload_to_drive(file, filename):
