@@ -58,9 +58,9 @@ SCOPES_S = ['https://www.googleapis.com/auth/spreadsheets']
 drive_service = build('drive', 'v3', credentials=credentials_D)
 sheets_service = build('sheets', 'v4', credentials=credentials_S)
 
-LICENSE_SHEET_ID = os.getenv(LICENSE_SHEET_ID)
-COURSE_SHEET_ID = os.getenv(COURSE_SHEET_ID)
-DRIVE_FOLDER_ID = os.getenv(DRIVE_FOLDER_ID)
+LICENSE_SHEET_ID = os.getenv("SHEET_ID")
+COURSE_SHEET_ID = os.getenv("COURSE_SHEET_ID")
+DRIVE_FOLDER_ID = os.getenv("DRIVE_FOLDER_ID")
 
 # Upload file to Google Drive
 def upload_to_drive(file, filename):
