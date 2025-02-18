@@ -4,12 +4,14 @@ from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseUpload
 import io
+import os
+from dotenv import load_dotenv
 
 st.set_page_config(page_title="Maharashtra Motor Driving School", layout="wide")
 
 # Google Drive and Google Sheets API setup
-SERVICE_ACCOUNT_FILE_S = './sheets-451316-b010093f1406.json'
-SERVICE_ACCOUNT_FILE_D = './sheets-451316-9e3f673ccd13.json'
+SERVICE_ACCOUNT_FILE_S = os.getenv('SERVICE_ACCOUNT_FILE_S')
+SERVICE_ACCOUNT_FILE_D = os.getenv('SERVICE_ACCOUNT_FILE_D')
 SCOPES_D = ['https://www.googleapis.com/auth/drive']
 SCOPES_S = ['https://www.googleapis.com/auth/spreadsheets']
 
@@ -22,9 +24,9 @@ credentials_s = service_account.Credentials.from_service_account_file(
 drive_service = build('drive', 'v3', credentials=credentials_d)
 sheets_service = build('sheets', 'v4', credentials=credentials_s)
 
-LICENSE_SHEET_ID = '1mWtRKCtyYEm798qGMRrcF92T8x3-LatBjPEVxSfPjMA'
-COURSE_SHEET_ID = '1BG69xjMP91Df6e1SG5aLpbUpXvqfsQmM_P-BUrQpfYE'
-DRIVE_FOLDER_ID = "10OX2etiQavtpYU32ReN_rCaeTsZXFOa7"
+LICENSE_SHEET_ID = os.getenv('LICENSE_SHEET_ID')
+COURSE_SHEET_ID =  os.getenv('COURSE_SHEET_ID')
+DRIVE_FOLDER_ID =  os.getenv('DRIVE_FOLDER_ID')
 
 # Upload file to Google Drive
 def upload_to_drive(file, filename):
