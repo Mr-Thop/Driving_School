@@ -7,7 +7,7 @@ import io
 from google.oauth2.service_account import Credentials
 import os
 
-private_key_sheets = os.getenv('PRIVATE_KEY_SHEETS').replace('\\n', '\n')  # Multiline key needs this
+private_key_sheets = os.getenv('PRIVATE_KEY_SHEETS')
 private_key_drive = os.getenv('PRIVATE_KEY_DRIVE').replace('\\n', '\n')  # Multiline key needs this
 
 
