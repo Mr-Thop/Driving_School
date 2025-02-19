@@ -236,7 +236,7 @@ def chatbot():
         Maharashtra Motor Driving School is a leading institution committed to providing top-quality driving education. With over a decade of experience, we have trained thousands of confident drivers across the state. Our mission is to ensure that every student masters the art of driving while prioritizing road safety and traffic regulations.
         """)
 
-        st.image("https://images.unsplash.com/photo-1570125909232-8b5b5eb702c7", caption="Driving Lessons in Progress", use_column_width=True)
+        st.image("https://images.unsplash.com/photo-1570125909232-8b5b5eb702c7", caption="Driving Lessons in Progress", use_container_width=True)
     
         st.subheader("Why Choose Us?")
         st.write("""
@@ -248,7 +248,7 @@ def chatbot():
         - 📋 Assistance with Learner’s and Permanent Driving License
         """)
     
-        st.image("https://images.unsplash.com/photo-1517686469429-8bdb88b9e0c4", caption="Our Experienced Instructors", use_column_width=True)
+        st.image("https://images.unsplash.com/photo-1517686469429-8bdb88b9e0c4", caption="Our Experienced Instructors", use_container_width=True)
     
         st.subheader("Our Services")
         st.write("""
@@ -259,7 +259,7 @@ def chatbot():
         - **License Assistance**: Complete support for obtaining your driving license.
         """)
     
-        st.image("https://images.unsplash.com/photo-1552642986-ccb41e7059a4", caption="Practical Training Session", use_column_width=True)
+        st.image("https://images.unsplash.com/photo-1552642986-ccb41e7059a4", caption="Practical Training Session", use_container_width=True)
     
         st.subheader("Our Commitment to Safety")
         st.write("""
@@ -268,7 +268,7 @@ def chatbot():
         Our vehicles are equipped with dual control systems to ensure that our instructors can take charge whenever necessary, giving you peace of mind as you learn.
         """)
     
-        st.image("https://images.unsplash.com/photo-1527245386021-5c0f27ebc61a", caption="Safety-First Approach", use_column_width=True)
+        st.image("https://images.unsplash.com/photo-1527245386021-5c0f27ebc61a", caption="Safety-First Approach", use_container_width=True)
     
         st.subheader("Join Us Today")
         st.write("""
