@@ -85,7 +85,7 @@ def chatbot():
     st.write("Welcome to Maharashtra Motor Driving School! We are dedicated to providing high-quality driving training to ensure road safety and confidence for our learners. Our experienced instructors and well-structured courses cater to both beginners and experienced drivers looking to refresh their skills.")
 
     with st.sidebar:
-        action = st.radio("What would you like to do?", ("Work with License", "Enroll in Learning Driving Course", "About Us"))
+        action = st.selectbox("What would you like to do?", ("About Us", "Enroll in Learning Driving Course", "Work with License"))
 
     if action == "Work with License":
         action2 = st.radio("What would you like to Know about License?", ("Apply", "Enquire"))
