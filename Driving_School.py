@@ -229,10 +229,56 @@ def chatbot():
                 st.error("Please provide your Name and Contact Number")
 
     elif action == "About Us":
-        st.subheader("About Maharashtra Motor Driving School")
+        st.title("Welcome to Maharashtra Motor Driving School")
         st.write("""
-        We are a trusted driving school in Maharashtra dedicated to promoting safe driving practices. Our experienced instructors and comprehensive training programs ensure that every student becomes a confident and responsible driver.
+        🚗 **Your Journey to Safe and Confident Driving Starts Here!**
+    
+        Maharashtra Motor Driving School is a leading institution committed to providing top-quality driving education. With over a decade of experience, we have trained thousands of confident drivers across the state. Our mission is to ensure that every student masters the art of driving while prioritizing road safety and traffic regulations.
         """)
+
+        st.image("https://images.unsplash.com/photo-1570125909232-8b5b5eb702c7", caption="Driving Lessons in Progress", use_column_width=True)
+    
+        st.subheader("Why Choose Us?")
+        st.write("""
+        - 🏆 Experienced and Certified Instructors
+        - 🚦 Comprehensive and Personalized Driving Courses
+        - 🏎️ Training on Modern Vehicles
+        - 🛣️ Focus on Road Safety and Defensive Driving
+        - ✅ Flexible Scheduling to Suit Your Needs
+        - 📋 Assistance with Learner’s and Permanent Driving License
+        """)
+    
+        st.image("https://images.unsplash.com/photo-1517686469429-8bdb88b9e0c4", caption="Our Experienced Instructors", use_column_width=True)
+    
+        st.subheader("Our Services")
+        st.write("""
+        - **Basic Driving Lessons**: Learn the fundamentals of driving.
+        - **Advanced Driving Techniques**: For experienced drivers to enhance their skills.
+        - **Traffic Rules and Road Safety Education**: Stay updated on all traffic laws.
+        - **Practical On-Road Training**: Real-time practice on busy roads.
+        - **License Assistance**: Complete support for obtaining your driving license.
+        """)
+    
+        st.image("https://images.unsplash.com/photo-1552642986-ccb41e7059a4", caption="Practical Training Session", use_column_width=True)
+    
+        st.subheader("Our Commitment to Safety")
+        st.write("""
+        We prioritize safety above all else. Our curriculum is designed to educate learners on defensive driving techniques, emergency handling, and responsible driving behavior.
+    
+        Our vehicles are equipped with dual control systems to ensure that our instructors can take charge whenever necessary, giving you peace of mind as you learn.
+        """)
+    
+        st.image("https://images.unsplash.com/photo-1527245386021-5c0f27ebc61a", caption="Safety-First Approach", use_column_width=True)
+    
+        st.subheader("Join Us Today")
+        st.write("""
+        Ready to start your driving journey? Contact us now and take the first step towards becoming a confident and responsible driver!
+        
+        📞 **Call Us:** +91 98765 43210  
+        📧 **Email:** info@maharashtramotor.com
+        🌐 **Website:** www.maharashtramotordrivingschool.com
+        """)
+
 
 if __name__ == "__main__":
     chatbot()
