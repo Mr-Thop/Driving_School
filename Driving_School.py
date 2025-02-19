@@ -236,6 +236,7 @@ def chatbot():
         Maharashtra Motor Driving School is a leading institution committed to providing top-quality driving education. With over a decade of experience, we have trained thousands of confident drivers across the state. Our mission is to ensure that every student masters the art of driving while prioritizing road safety and traffic regulations.
         """)
 
+        st.image("https://cdn.dribbble.com/userupload/21895326/file/original-d697a1f6c9b4196000ef252f739ccc25.gif",use_container_width=True)
         st.image("https://images.unsplash.com/photo-1570125909232-8b5b5eb702c7", caption="Driving Lessons in Progress", use_container_width=True)
     
         st.subheader("Why Choose Us?")
