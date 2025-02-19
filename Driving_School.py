@@ -269,7 +269,7 @@ def chatbot():
         Our vehicles are equipped with dual control systems to ensure that our instructors can take charge whenever necessary, giving you peace of mind as you learn.
         """)
     
-        st.image("https://images.unsplash.com/photo-1527245386021-5c0f27ebc61a", caption="Safety-First Approach", use_container_width=True)
+        st.image("https://media4.giphy.com/media/0f7m4lwSud4NgBAlhy/200w.gif?cid=6c09b952pxztlfliemv3f1edbvqija61eos8eomhneqedwva&ep=v1_gifs_search&rid=200w.gif&ct=g", caption="Safety-First Approach", use_container_width=True)
     
         st.subheader("Join Us Today")
         st.write("""
